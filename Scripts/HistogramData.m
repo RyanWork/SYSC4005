@@ -1,5 +1,5 @@
 % Iterate through the project folder
-files = dir('../Project/*.dat');
+files = dir('./Project/*.dat');
 numFiles = length(files);
 
 % Create a directory to later save the images
