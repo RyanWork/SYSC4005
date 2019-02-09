@@ -19,7 +19,7 @@ for i = 1:numFiles
     [path, baseFileName, ext] = fileparts(fullPath);
     
     % Create the histogram of the data
-    expDist = makedist('Exponential');
+    expDist = makedist('Weibull');
     
     % Quick check to see if our index is 1
     % Cause Matlab is shit and it's not 0 based index
