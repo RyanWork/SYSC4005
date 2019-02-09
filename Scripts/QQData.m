@@ -30,18 +30,9 @@ for i = 1:numFiles
     end
     % Create the QQ-Plot using the Exponential Distribution
     qqplot(dataRead, expDist);
-    title(strcat(file.name, ' -- QQ Plot, Exponential'));
-    ylabel('Time (min)')
-    
-    % Save the Exponential image to the SYSC4005QQ directory
-    saveas(gcf, strcat('SYSC4005QQ/', baseFileName, 'QQ_Exponential.png'));
-    
-    % Create the QQ-Plot using the Weibull Distribution
-    weibullDist = makedist('Weibull');
-    figure(i + i);
-    qqplot(dataRead, weibullDist);
     title(strcat(file.name, ' -- QQ Plot, Weibull'));
-    
-    % Save the Weibull image to the SYSC4005QQ directory
+    ylabel('Time (min)')
+
+    % Save the Exponential image to the SYSC4005QQ directory
     saveas(gcf, strcat('SYSC4005QQ/', baseFileName, 'QQ_Weibull.png'));
 end
