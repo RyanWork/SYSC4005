@@ -13,6 +13,8 @@ for i = 1:numFiles
     % Create a probability distribution with the data
     pd = fitdist(dataRead, 'Weibull');
     
+    pd
+    
     % Do a goodness-of-fit test
     chiTest = chi2gof(dataRead, 'CDF', pd);
     
